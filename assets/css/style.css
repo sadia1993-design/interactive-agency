@@ -1,4 +1,20 @@
 /*========================================*/
+/*                proxima fonts           */
+/*========================================*/
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/flaticonFlaticon.eot');
+  src: url('../fonts/flaticonFlaticon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/proxima/proximanova-light.otf') format('otf'),
+    url('../fonts/proxima/Proxima\ Nova\ ScOsf\ Condensed\ Light.otf') format('otf'),
+    url('../fonts/flaticon/Flaticon.woff') format('woff'),
+    url('../fonts/flaticon/Flaticon.ttf') format('truetype'),
+    url('../fonts/flaticon/Flaticon.svg#Flaticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*========================================*/
 /*                Basic Setup             */
 /*========================================*/
 * {
@@ -7,7 +23,9 @@
   outline: 0;
   box-sizing: border-box;
 }
-.mb-15{margin-bottom: 15px;}
+.mb-15 {
+  margin-bottom: 15px;
+}
 .offset-3 {
   margin-left: 281.25px;
   margin-right: 281.25px;
@@ -41,6 +59,10 @@ a {
   width: 100%;
   content: '';
 }
+
+.pt-115 {
+  padding: 115px 0;
+}
 .align-left {
   float: left;
 }
@@ -48,7 +70,7 @@ a {
   float: right;
 }
 .container {
-  max-width: 75%;
+  max-width: 85%;
   margin: auto;
 }
 .section-padding {
@@ -72,7 +94,6 @@ ul li a {
 .d-table {
   display: table;
   height: 100vh;
-  margin: auto;
 }
 .d-table-cell {
   display: table-cell;
@@ -86,7 +107,7 @@ nav.menu-area span {
   display: none;
 }
 nav.menu-area {
-  margin-top: 9px;
+  margin-top: 4px;
 }
 .logo a {
   display: block;
@@ -98,71 +119,93 @@ nav.menu-area {
 nav.menu-area ul li {
   margin-right: 34px;
 }
-
+nav.menu-area ul li a {
+  border-bottom: 2px solid transparent;
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+}
+nav.menu-area ul li a:hover {
+  border-bottom: 2px solid #06afef;
+}
 nav.menu-area ul li:last-child {
   margin-right: 0;
 }
 header#header-area {
-  background: rgba(0, 0, 0, 0.5);
+  background: #fff;
   position: fixed;
   width: 100%;
   top: 0;
+  border-bottom: 2px solid rgb(220 214 214 / 20%);
   left: 0;
+  padding: 8px 0;
+  z-index: 90;
 }
 /*========================================*/
-/*        2. header background area       */
+/*        2. hero area                    */
 /*========================================*/
 #hero-area {
-  background-image: url(../images/header-bg.jpg);
+  background: #06afef;
   height: 100vh;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-nav.menu-area ul li a {
+.hero-content h1 {
   color: #fff;
+  font-size: 3.3em;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  color: #ffff;
+  font-size: 21px;
+  line-height: 1.4;
+  margin-bottom: 20px;
 }
 .hero-content {
   position: relative;
 }
 
-.hero-content a.scrooler {
-  position: absolute;
-  bottom: 14%;
-  left: 50%;
-  margin-left: -36px;
+a.commonBtn:hover {
+  background: linear-gradient(90deg, #fbfeff, #161515);
+}
+a.commonBtn,
+input.commonBtn {
+  background: #fff;
+  display: inline-block;
+  color: #06afef;
+  font-size: 1.2em;
+  padding: 20px 40px;
+  border-radius: 40px;
+  margin-top: 20px;
+  transition: all 0.9s ease-in;
+  font-weight: bold;
 }
 /*======================================*/
 /*          feature area                */
 /*======================================*/
-section#feature {
-  background-image: url(../images/service.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-   color:#fff
-}
-.single-service p {
-  font-size: .7em;
-  line-height: 1.1rem;
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-a.commonBtn, input.commonBtn {
-  background: linear-gradient(
-90deg
-, #4f007c, #b20084);
+.service-inner i {
   display: inline-block;
-  color: #fff;
-  font-size: .8em;
-  padding: 20px 40px;
-  border-radius: 40px;
-  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #08b0f0;
 }
-.pt-115{
-  padding: 115px 0 ;
+.single-service h3 {
+    margin-bottom: 8px;
 }
+.single-service {
+    box-shadow: 0px 5px 10px 0px rgb(106 106 106 / 12%);
+    padding: 40px 30px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.pt-90, .pb-90{
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
+.pb-50, pt-50{padding-bottom: 50px;padding-top: 50px;}
 /*======================================*/
 /*          service area                */
 /*======================================*/
@@ -186,21 +229,102 @@ a.commonBtn, input.commonBtn {
   font-size: 18px;
   line-height: 1.5;
 }
-.mb-75{
+.mb-75 {
   margin-bottom: 75px;
 }
 
-.mb-100{
+.mb-100 {
   margin-bottom: 100px;
 }
-.section-padding{
+.section-padding {
   padding: 100px 0;
 }
 /*====================================*/
-/*               about                */
+/*               about us area       */
 /*====================================*/
-#about{
-  background-image: url(../images/about-us/team.jpg) ;
+.aboutUsContent h2 {
+    font-size: 16px;
+    color: #666;
+    font-weight: 300;
+    margin-bottom: 4px;
+}
+
+.aboutUsContent h3 {
+    font-size: 35px;
+    margin-bottom: 17px;
+}
+
+.aboutUsContent p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.aboutUsContent ul.about-list li {list-style: none;position: relative;padding-left: 22px;margin-bottom: 13px;}
+
+.aboutUsContent ul.about-list li:before {
+   content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    border: 2px solid #06AFEF;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.aboutUsContent ul.about-list li:after {
+   content: '';
+    position: absolute;
+    left: 4px;
+    top: 7px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #06AFEF;
+}
+.blueBtn{
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 16px 27px;
+    border-radius: 40px;
+    margin-top: 20px;
+    transition: all 0.9s ease-in;
+    font-weight: bold;
+    background: #06afef;
+}
+input.blueBtn{
+  display: inline-block;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 16px 27px;
+    border-radius: 40px;
+    margin-top: 20px;
+    transition: all 0.9s ease-in;
+    font-weight: bold;
+    background: #06afef;
+    cursor: pointer;
+    border: 0;
+}
+/*====================================*/
+/*               team                */
+/*====================================*/
+section#about {
+    background: #f7f7f7;
+    padding: 60px 0;
+}
+.single-team {
+    box-shadow: 0px 5px 10px 0px rgb(106 106 106 / 15%);
+    padding: 30px;
+}
+ul.team-social li a i {
+    color: #888;
+    font-size: 15px;
+    margin-top: 11px;
+    margin-right: 5px;
+}
+.team-content h3 {
+    margin-bottom: 0;
 }
 .section-title p {
   font-size: 18px;
@@ -212,14 +336,16 @@ a.commonBtn, input.commonBtn {
   line-height: 1.5;
   font-size: 18px;
 }
-.mb-70{margin-bottom: 70px;}
-.mt-70{margin-top: 70px;}
+.mb-70 {
+  margin-bottom: 70px;
+}
+.mt-70 {
+  margin-top: 70px;
+}
 .team-thumb {
   margin-bottom: 15px;
 }
-.team-content h3 {
-  margin-bottom: 10px;
-}
+
 /*====================================*/
 /*               contact us           */
 /*====================================*/
@@ -230,7 +356,8 @@ a.commonBtn, input.commonBtn {
   margin-bottom: 10px;
   border: 1px solid #949494;
 }
-input::placeholder , textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
   color: #949494;
 }
 .contact-form p {
@@ -240,14 +367,38 @@ input::placeholder , textarea::placeholder{
 
 .contact-form h3 {
   margin-bottom: 5px;
+  font-size: 26px;
 }
+
 
 /*====================================*/
 /*             footer                 */
 /*====================================*/
-section#footer-area .footer-top{
-    background-color: #949494;
+
+footer#footer-area\ {
+    background: #f7f7f7;
 }
-section#footer-area .footer-bottom{
-    background-color: #000;
+.footer-top {
+    padding-top: 45px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 45px;
+}
+.foo-widget img {
+    max-width: 58%;
+    margin-bottom: 16px;
+}
+
+.foo-widget .foo-text p {
+    color: #888;
+    margin-bottom: 22px;
+}
+.copyright-text p a {
+    display: inline-block;
+    color: #00AEEF;
+    font-weight: bold;
+}
+.foo-widget ul.foo-list li a i {color: #888;margin-right: 7px;}
+/* about team*/
+.lightgrey{
+  background: #eee;
 }
