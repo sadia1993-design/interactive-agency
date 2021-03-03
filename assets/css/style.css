@@ -400,5 +400,5 @@ footer#footer-area\ {
 .foo-widget ul.foo-list li a i {color: #888;margin-right: 7px;}
 /* about team*/
 .lightgrey{
-  background: #eee;
+  background: #eee !important;
 }
